@@ -38,7 +38,7 @@ const char HTTP_SCAN_LINK[] PROGMEM       = "<br/><div class=\"c\"><a href=\"/wi
 const char HTTP_SAVED[] PROGMEM           = "<div>Daten gespeichert!<br/>Netzwerkverbindung wird hergestellt.<br/><br/>Bei Fehler bitte nochmals mit dem AP verbinden!</div>";
 const char HTTP_END[] PROGMEM             = "</div></body></html>";
 
-#define WIFI_MANAGER_MAX_PARAMS 10
+#define WIFI_MANAGER_MAX_PARAMS 15
 
 class WiFiManagerParameter {
   public:
