@@ -539,6 +539,17 @@ void WiFiManager::handleWifi(boolean scan) {
         pitem.replace("{c}", _params[i]->getCustomHTML());
         page += pitem;
     }
+      if (_params[i]->getType() == 4) {
+          String pitem = FPSTR(HTTP_FORM_PARAM_PWD);
+          pitem.replace("{i}", _params[i]->getID());
+          pitem.replace("{n}", _params[i]->getID());
+          pitem.replace("{p}", _params[i]->getPlaceholder());
+          snprintf(parLength, 2, "%d", _params[i]->getValueLength());
+          pitem.replace("{l}", parLength);
+          pitem.replace("{v}", _params[i]->getValue());
+          pitem.replace("{c}", _params[i]->getCustomHTML());
+          page += pitem;
+      }
   }
     
   if (_params[0] != NULL) {
